@@ -1,5 +1,4 @@
 import sequelize from "./connection";
-import association from "./association"
 import Users from "../models/user";
 import Posts from "../models/post";
 
@@ -10,8 +9,6 @@ import Posts from "../models/post";
 
     await Users.sync();
     await Posts.sync();
-    
-    // association.associate();
 
     sequelize.close();
 })();
