@@ -12,7 +12,6 @@ const connection =  createConnection({
 (() => {
     console.log('CREATE DATABASE');
     connection.query(`SHOW DATABASES LIKE '${env.DB_NAME}'`, (err, result)=>{
-        console.log(result.toString());
         if (err) {
             console.error(err);
             connection.end();
